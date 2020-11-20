@@ -1,0 +1,12 @@
+included:
+
+excluded:
+- Pods
+- Bible/View/CheckList/Controllers/Setting/SettingViewController.swift
+
+disabled_rules:
+- trailing_whitespace
+- multiple_closures_with_trailing_closure
+
+force_cast: warning
+line_length: 250

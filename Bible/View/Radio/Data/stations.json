@@ -1,0 +1,11 @@
+{
+    "station":
+    [
+     {
+     "name": "CCM 듣기",
+     "streamURL": "http://c1.inlive.co.kr:9742",
+     "imageURL": "jesus.png",
+     "desc": "The Music Starts Here",
+     }
+    ]
+}

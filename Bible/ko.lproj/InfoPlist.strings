@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  Bible
+
+  Created by jge on 2020/09/07.
+  Copyright © 2020 jge. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "데일리 성경";
