@@ -14,20 +14,16 @@ struct BibleListView: View {
     @Environment(\.colorScheme) var colorScheme
     @State private var dismissAll: Bool = false
     
-    @State private var isOld = UserDefaults.standard.value(forKey: "type") as! String
-    @State private var vcode = UserDefaults.standard.value(forKey: "vcode") as! String
+    @ObservedObject private var bibleVM = MainViewModel()
     
     var body: some View {
-        List((vcode == "GAE") ? ((isOld == "old") ? oldBibleData : newBibleData) : ((isOld == "old") ? oldEngBibleData : newEngBibleData), id: \.id) { bible in
+        List((bibleVM.isOld == "old") ? bibleVM.oldBibles : bibleVM.newBibles, id: \.id) { bible in
             NavigationLink(destination: NumberListView(dismissAll: self.$dismissAll, bcode: bible.bcode, chapter_num: bible.chapter_count, name: bible.name)) {
                 HStack {
-                    Text(self.isOld == "old" ? String(bible.bcode) : String(bible.bcode - 39))
-//                        .font(.custom("NanumSquareL", size: 25))
+                    Text(bibleVM.isOld == "old" ? String(bible.bcode) : String(bible.bcode - 39))
                     Text(bible.name)
-//                        .font(.custom("NanumSquareEB", size: 25))
                     Spacer()
                     Text("총 \(bible.chapter_count)장")
-//                        .font(.custom("NanumSquareL", size: 20))
                 }
                 .padding(.top, 10)
                 .padding(.bottom, 10)
@@ -37,22 +33,24 @@ struct BibleListView: View {
                     self.presentationMode.wrappedValue.dismiss()
                 }
             }
-            .navigationBarTitle("성경 선택", displayMode: .inline)
+            .navigationBarTitle("\(bibleVM.bibleStatus)성경 선택", displayMode: .automatic)
             .navigationBarItems(trailing:
                 HStack(spacing: 20) {
                     Text("구약")
-                        .foregroundColor(self.isOld == "old" ? (self.colorScheme == .dark ? .white : .black) : .gray)
-                        .onTapGesture {
-                            self.isOld = "old"
+                        .foregroundColor(bibleVM.isOld == "old" ? Color("Text") : .gray)
+                        .onTapGesture(count: 1) {
+//                            self.isOld = "old"
                             UserDefaults.standard.set("old", forKey: "type")
                             UserDefaults.standard.synchronize()
+                            bibleVM.getBibles()
                     }
                     Text("신약")
-                        .foregroundColor(self.isOld == "old" ? .gray : (self.colorScheme == .dark ? .white : .black))
-                        .onTapGesture {
-                            self.isOld = "new"
+                        .foregroundColor(bibleVM.isOld == "old" ? .gray : Color("Text"))
+                        .onTapGesture(count: 1) {
+//                            self.isOld = "new"
                             UserDefaults.standard.set("new", forKey: "type")
                             UserDefaults.standard.synchronize()
+                            bibleVM.getBibles()
                     }
             })
         }

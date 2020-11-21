@@ -6,14 +6,7 @@ target 'Bible' do
   use_frameworks!
 
   # Pods for Bible
-pod 'RealmSwift'
 pod 'WaterfallGrid'
-pod 'lottie-ios'
 pod 'SwiftLint'
-
-target 'BibleTests' do
-pod 'RealmSwift'
-
-end
 
 end

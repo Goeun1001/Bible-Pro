@@ -26,11 +26,11 @@ struct VerseView: View {
                             HStack {
                                 VStack {
                                     Text(verse.vnum)
-//                                        .font(.custom("NanumSquareL", size: 18))
+                                    //                                        .font(.custom("NanumSquareL", size: 18))
                                     Spacer()
                                 }
                                 Text(verse.content)
-//                                    .font(.custom("NanumSquareB", size: 16))
+                                //                                    .font(.custom("NanumSquareB", size: 16))
                             }
                         }
                     }
@@ -43,77 +43,77 @@ struct VerseView: View {
                             } else if self.offset.height < 0 {
                                 self.float = false
                             }
-                    }
+                        }
                 )
                 
                 // MARK: Floating Bar
                 if float {
                     HStack(alignment: .center) {
-                        NavigationLink(destination: SongListView()) {
-                            barView(imageName: "MusicBook", text: "찬송가")
+                        HStack {
+                            NavigationLink(destination: SongListView()) {
+                                barView(imageName: "MusicBook", text: "찬송가")
+                            }
+                            
+                            Spacer()
+                            
+                            NavigationLink(destination: GyodokListView()) {
+                                barView(imageName: "Book", text: "교독문")
+                            }
+                            
+                            Spacer()
+                            
+                            NavigationLink(destination: CCMVCtoUI()) {
+                                barView(imageName: "CCM", text: "CCM")
+                            }.simultaneousGesture(TapGesture().onEnded {
+                                self.inline = true
+                            })
+                            
+                            Spacer()
+                            
+                            NavigationLink(destination: SettingView()) {
+                                barView(imageName: "Settings", text: "설정")
+                            }
                         }
-                        
-                        Spacer()
-                        
-                        NavigationLink(destination: GyodokListView()) {
-                            barView(imageName: "Book", text: "교독문")
-                        }
-                        
-                        Spacer()
-                        
-                        NavigationLink(destination: CCMVCtoUI()) {
-                            barView(imageName: "CCM", text: "CCM")
-                        }.simultaneousGesture(TapGesture().onEnded {
-                            self.inline = true
-                        })
-                        
-                        Spacer()
-                        
-                        NavigationLink(destination: SettingView()) {
-                            barView(imageName: "Settings", text: "설정")
-                                .padding(.trailing, 20)
-                        }
-                        
+                        .padding([.leading, .trailing], UIFrame.UIWidth / 10)
                     }.padding(.top, 10)
-                        .padding(.bottom, UIFrame.UIHeight / 25)
-                         .background(RoundedCorners(color: Color("Gray"), tl: 25, tr: 25, bl: 0, br: 0))
+                    .padding(.bottom, 5)
+                    .background(RoundedCorners(color: Color("Gray"), tl: 25, tr: 25, bl: 0, br: 0).shadow(radius: 3).edgesIgnoringSafeArea(.bottom))
+                    
                 }
-            }.edgesIgnoringSafeArea(.bottom)
-                .onAppear {
-//                    if UserDefaults.standard.value(forKey: "isChanged") as! Bool == true {
-                        self.verseVM.getVerse()
-//                    }
-                    self.inline = false
+            }
+            .onAppear {
+                self.verseVM.getVerse()
+                self.inline = false
             }
             .navigationBarTitle(Text("\(self.verseVM.bibleName.name) \(self.verseVM.verses.first?.cnum ?? "0")장"), displayMode: inline ? .inline : .automatic)
             .navigationBarItems(trailing:
-                HStack(spacing: 20) {
-                    NavigationLink(destination: BibleListView()) {
-                        imageView(imageName: "burger", isSystem: false)
-                    }
-                    imageView(imageName: "arrowtriangle.left", isSystem: true)
-                        .onTapGesture {
-                            if Int(self.verseVM.verses.first!.cnum)! - 1 != 0 {
-                                let minus = Int(self.verseVM.verses.first!.cnum)! - 1
-                                UserDefaults.standard.set("\(minus)", forKey: "cnum")
-                                UserDefaults.standard.synchronize()
-                                self.verseVM.getVerse()
-                            }
-                    }
-                    imageView(imageName: "arrowtriangle.right", isSystem: true)
-                        .onTapGesture {
-                            if Int(self.verseVM.verses.first!.cnum)! + 1 != self.verseVM.bibleName.chapter_count + 1 {
-                                let plus = Int(self.verseVM.verses.first!.cnum)! + 1
-                                UserDefaults.standard.set("\(plus)", forKey: "cnum")
-                                UserDefaults.standard.synchronize()
-                                self.verseVM.getVerse()
-                            }
-                    }
-            })
-        }.accentColor(.black)
-        
+                                    HStack(spacing: 20) {
+                                        NavigationLink(destination: BibleListView()) {
+                                            imageView(imageName: "burger", isSystem: false)
+                                        }
+                                        imageView(imageName: "arrowtriangle.left", isSystem: true)
+                                            .onTapGesture {
+                                                if Int(self.verseVM.verses.first!.cnum)! - 1 != 0 {
+                                                    let minus = Int(self.verseVM.verses.first!.cnum)! - 1
+                                                    UserDefaults.standard.set("\(minus)", forKey: "cnum")
+                                                    UserDefaults.standard.synchronize()
+                                                    self.verseVM.getVerse()
+                                                }
+                                            }
+                                        imageView(imageName: "arrowtriangle.right", isSystem: true)
+                                            .onTapGesture {
+                                                if Int(self.verseVM.verses.first!.cnum)! + 1 != self.verseVM.bibleName.chapter_count + 1 {
+                                                    let plus = Int(self.verseVM.verses.first!.cnum)! + 1
+                                                    UserDefaults.standard.set("\(plus)", forKey: "cnum")
+                                                    UserDefaults.standard.synchronize()
+                                                    self.verseVM.getVerse()
+                                                }
+                                            }
+                                    })
+        }.accentColor(Color("Text"))
+        .navigationViewStyle(StackNavigationViewStyle())
     }
-    
+
 }
 
 struct currentVerseView_Previews: PreviewProvider {
@@ -129,14 +129,14 @@ struct imageView: View {
         VStack {
             if isSystem {
                 Image(systemName: "\(imageName)")
-                .resizable()
-                .frame(width: 20, height: 20)
-                .foregroundColor(.black)
+                    .resizable()
+                    .frame(width: 20, height: 20)
+                    .foregroundColor(Color("Text"))
             } else {
                 Image(imageName)
-                .resizable()
-                .frame(width: 30, height: 30)
-                .foregroundColor(.black)
+                    .resizable()
+                    .frame(width: 30, height: 30)
+                    .foregroundColor(Color("Text"))
             }
         }
     }
@@ -151,9 +151,10 @@ struct barView: View {
             Image(imageName)
                 .resizable()
                 .frame(width: 30, height: 30)
-                .foregroundColor(.black)
+                .foregroundColor(Color("Text"))
             Text(text)
-                .foregroundColor(.black)
+                .foregroundColor(Color("Text"))
+
         }
     }
 }

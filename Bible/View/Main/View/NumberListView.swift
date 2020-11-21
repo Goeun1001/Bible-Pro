@@ -10,7 +10,6 @@ import SwiftUI
 import WaterfallGrid
 
 struct NumberListView: View {
-    
     @Environment(\.presentationMode) private var presentationMode
     @Binding var dismissAll: Bool
     
@@ -24,7 +23,6 @@ struct NumberListView: View {
             .onTapGesture {
                 UserDefaults.standard.set("\(self.bcode)", forKey: "bcode")
                 UserDefaults.standard.set("\(number)", forKey: "cnum")
-//                UserDefaults.standard.set(true, forKey: "isChanged")
                 UserDefaults.standard.synchronize()
                 self.presentationMode.wrappedValue.dismiss()
                 self.dismissAll = true
@@ -49,9 +47,9 @@ struct numberGridView: View {
     var body: some View {
         Text(text)
         .font(.headline)
-        .foregroundColor(.black)
+        .foregroundColor(Color("Text"))
             .frame(width: 40)
         .padding()
-        .background(RoundedRectangle(cornerRadius: 20).fill(Color("LightGray")))
+        .background(RoundedRectangle(cornerRadius: 20).fill(Color("Gray")))
     }
 }

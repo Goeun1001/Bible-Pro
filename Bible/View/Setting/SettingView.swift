@@ -12,6 +12,7 @@ struct SettingView: View {
     @State private var select = UserDefaults.standard.value(forKey: "selectedIndex") as! Int
     @State private var optionsTitle = ["한", "영"]
     @State private var showingAlert = false
+    @State private var showModal = false
     
     var body: some View {
         List {
@@ -26,12 +27,10 @@ struct SettingView: View {
                     }.onReceive([self.select].publisher.first(), perform: { (value) in
                         if value == 0 {
                             UserDefaults.standard.set("GAE", forKey: "vcode")
-                            UserDefaults.standard.set(true, forKey: "isChanged")
                             UserDefaults.standard.set(0, forKey: "selectedIndex")
                             UserDefaults.standard.synchronize()
                         } else {
                             UserDefaults.standard.set("NIV", forKey: "vcode")
-                            UserDefaults.standard.set(true, forKey: "isChanged")
                             UserDefaults.standard.set(1, forKey: "selectedIndex")
                             UserDefaults.standard.synchronize()
                         }
@@ -39,6 +38,16 @@ struct SettingView: View {
                         .pickerStyle(SegmentedPickerStyle())
                         .frame(width: 90)
                 }
+            }
+            Section(header: Text("구매")) {
+                HStack {
+                    Text("오디오 구매")
+                    Spacer()
+                    Text(">")
+                        .foregroundColor(.gray)
+                }.onTapGesture {
+                        self.showModal = true
+                    }
             }
         }.listStyle(GroupedListStyle())
             .environment(\.horizontalSizeClass, .regular)

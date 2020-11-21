@@ -19,13 +19,6 @@ let songData: [Song] = readSong("SELECT * FROM hymns")
 
 let dailyData: [Daily] = readDaily("SELECT * FROM todaybible")
 
-func readContent(bcode: Int, cnum: Int) -> [Verse] {
-    
-    let bibleContent: [Verse] = readVerses("SELECT vnum, content FROM verses where vcode = 'GAE' AND bcode = '\(bcode)' AND cnum = '\(cnum)'")
-    return bibleContent
-    
-}
-
 func readBibles(_ queryString: String) -> [Bible] {
     
     var bibleList = [Bible]()
@@ -46,7 +39,7 @@ func readBibles(_ queryString: String) -> [Bible] {
     if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK {
         let errmsg = String(cString: sqlite3_errmsg(db)!)
         print("error preparing insert: \(errmsg)")
-        //        return
+//            return
     }
     
     while sqlite3_step(stmt) == SQLITE_ROW {
