@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUI
+import StoreKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
@@ -42,6 +43,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         setUp()
         
+        let storeManager = StoreManager()
+        
+        SKPaymentQueue.default().add(storeManager)
+        storeManager.getProducts(productIDs: ["Audio_payment"])
+        
         let contentView = VerseView()
         //        let contentView = ContentView()
         
@@ -49,7 +55,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             //            window.rootViewController = UIHostingController(rootView: contentView)
-            window.rootViewController = UIHostingController(rootView: contentView)
+            window.rootViewController = UIHostingController(rootView: contentView.environmentObject(storeManager))
             self.window = window
             window.makeKeyAndVisible()
         }

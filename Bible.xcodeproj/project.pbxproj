@@ -17,6 +17,7 @@
 		D92D33DE24EBB42600545047 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92D33DD24EBB42600545047 /* SettingView.swift */; };
 		D962DEDE24FFAB3D00491EF5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = D962DEDD24FFAB3D00491EF5 /* .swiftlint.yml */; };
 		D978FB6225064DA500B50F53 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D978FB6425064DA500B50F53 /* InfoPlist.strings */; };
+		D97E1A892568E19B00A30557 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97E1A882568E19B00A30557 /* StoreManager.swift */; };
 		D984CBE22567CB44000F064F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D984CBE12567CB44000F064F /* StoreKit.framework */; };
 		D984CBF92567CCE9000F064F /* readData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D984CBF82567CCE9000F064F /* readData.swift */; };
 		D984CBFE2567CD04000F064F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D984CBFD2567CD04000F064F /* DataModel.swift */; };
@@ -101,6 +102,8 @@
 		D962DEDD24FFAB3D00491EF5 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		D978FB5F25064D6A00B50F53 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		D978FB6325064DA500B50F53 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D97E1A882568E19B00A30557 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
+		D97E1A992568F15F00A30557 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		D984CBE12567CB44000F064F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D984CBF82567CCE9000F064F /* readData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = readData.swift; sourceTree = "<group>"; };
 		D984CBFD2567CD04000F064F /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
@@ -185,6 +188,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D91E77842568AF1F0077D174 /* IAP */ = {
+			isa = PBXGroup;
+			children = (
+				D97E1A882568E19B00A30557 /* StoreManager.swift */,
+			);
+			path = IAP;
+			sourceTree = "<group>";
+		};
 		D92BAD9C24E2A2B800A28398 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +244,7 @@
 		D9B8CFDC24DAB51A00890693 = {
 			isa = PBXGroup;
 			children = (
+				D97E1A992568F15F00A30557 /* Configuration.storekit */,
 				D962DEDD24FFAB3D00491EF5 /* .swiftlint.yml */,
 				D9B8CFE724DAB51B00890693 /* Bible */,
 				D9B8CFE624DAB51B00890693 /* Products */,
@@ -252,6 +264,7 @@
 		D9B8CFE724DAB51B00890693 /* Bible */ = {
 			isa = PBXGroup;
 			children = (
+				D91E77842568AF1F0077D174 /* IAP */,
 				D984CBF72567CCDA000F064F /* Data */,
 				D9B8D01524DC238900890693 /* Extension */,
 				D9B8D00724DAB8E400890693 /* View */,
@@ -677,6 +690,7 @@
 				D9DD7DDB24F14A64005F2A92 /* ShareImageGenerator.swift in Sources */,
 				D9DD7DB624F14A64005F2A92 /* Reachability.swift in Sources */,
 				D9DD7DB124F14A64005F2A92 /* Track.swift in Sources */,
+				D97E1A892568E19B00A30557 /* StoreManager.swift in Sources */,
 				D9DD7DB724F14A64005F2A92 /* FRadioAPI.swift in Sources */,
 				D9DD7DD524F14A64005F2A92 /* AsyncImageView.swift in Sources */,
 				D984CBFE2567CD04000F064F /* DataModel.swift in Sources */,

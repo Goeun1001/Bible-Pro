@@ -6,16 +6,15 @@
 //  Copyright © 2020 jge. All rights reserved.
 //
 import SwiftUI
+import StoreKit
 
 struct VerseView: View {
     
     @ObservedObject private var verseVM = MainViewModel()
-    @State private var show_modal: Bool = false
     
     @State private var offset = CGSize.zero
     @State private var float = true
     @State var inline = false
-    @State var isBookmarked = false
     
     var body: some View {
         NavigationView {
@@ -26,11 +25,9 @@ struct VerseView: View {
                             HStack {
                                 VStack {
                                     Text(verse.vnum)
-                                    //                                        .font(.custom("NanumSquareL", size: 18))
                                     Spacer()
                                 }
                                 Text(verse.content)
-                                //                                    .font(.custom("NanumSquareB", size: 16))
                             }
                         }
                     }
@@ -110,7 +107,8 @@ struct VerseView: View {
                                                 }
                                             }
                                     })
-        }.accentColor(Color("Text"))
+        }
+        .accentColor(Color("Text"))
         .navigationViewStyle(StackNavigationViewStyle())
     }
 

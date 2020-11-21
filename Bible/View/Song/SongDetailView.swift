@@ -32,6 +32,10 @@ struct SongDetailView: View {
                         .padding(.trailing, 15)
                         .shadow(radius: 5)
                 }
+                
+                if UserDefaults.standard.bool(forKey: "purchased") {
+                    Text("오디오")
+                }
             }.padding(.top, 20)
                 .padding(.bottom, 20)
         }.navigationBarTitle(Text("\(self.number)장 \(self.name)"), displayMode: .inline)

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import StoreKit
 
 class MainViewModel: ObservableObject {
     @Published var verses = [Verse]()

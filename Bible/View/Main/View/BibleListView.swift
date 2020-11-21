@@ -39,7 +39,6 @@ struct BibleListView: View {
                     Text("구약")
                         .foregroundColor(bibleVM.isOld == "old" ? Color("Text") : .gray)
                         .onTapGesture(count: 1) {
-//                            self.isOld = "old"
                             UserDefaults.standard.set("old", forKey: "type")
                             UserDefaults.standard.synchronize()
                             bibleVM.getBibles()
@@ -47,7 +46,6 @@ struct BibleListView: View {
                     Text("신약")
                         .foregroundColor(bibleVM.isOld == "old" ? .gray : Color("Text"))
                         .onTapGesture(count: 1) {
-//                            self.isOld = "new"
                             UserDefaults.standard.set("new", forKey: "type")
                             UserDefaults.standard.synchronize()
                             bibleVM.getBibles()
