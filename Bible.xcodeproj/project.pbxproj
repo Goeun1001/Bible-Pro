@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8050A40B9A5A725420B971CD /* Pods_Bible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C63845989443F2067BE0D85 /* Pods_Bible.framework */; };
 		D905A81624F4C05100F7A83F /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = D905A81524F4C05100F7A83F /* RoundedCorners.swift */; };
+		D90908B42569E13200694335 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90908B32569E13200694335 /* Audio.swift */; };
+		D90908B8256A42B100694335 /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90908B7256A42B100694335 /* BookmarkView.swift */; };
 		D92D33D224EB3E7D00545047 /* GyodokDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92D33D124EB3E7D00545047 /* GyodokDetailView.swift */; };
 		D92D33D424EB7E2500545047 /* SongListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92D33D324EB7E2500545047 /* SongListView.swift */; };
 		D92D33D824EB9AB100545047 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92D33D724EB9AB100545047 /* Constants.swift */; };
@@ -28,7 +30,7 @@
 		D9B8CFEF24DAB51E00890693 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9B8CFEE24DAB51E00890693 /* Assets.xcassets */; };
 		D9B8CFF224DAB51E00890693 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9B8CFF124DAB51E00890693 /* Preview Assets.xcassets */; };
 		D9B8CFF524DAB51E00890693 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B8CFF324DAB51E00890693 /* LaunchScreen.storyboard */; };
-		D9B8D00324DAB77600890693 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8D00224DAB77600890693 /* DateConverter.swift */; };
+		D9B8D00324DAB77600890693 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8D00224DAB77600890693 /* Converter.swift */; };
 		D9B8D01A24DC2C9B00890693 /* BibleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8D01924DC2C9B00890693 /* BibleListView.swift */; };
 		D9C332B224E15F2700968023 /* VerseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C332B124E15F2700968023 /* VerseView.swift */; };
 		D9C332B524E1638100968023 /* holybible.db in Resources */ = {isa = PBXBuildFile; fileRef = D9C332A924E13B2400968023 /* holybible.db */; };
@@ -93,6 +95,8 @@
 		9C63845989443F2067BE0D85 /* Pods_Bible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C274D52A5074634017657F /* Pods-Bible-BibleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bible-BibleTests.debug.xcconfig"; path = "Target Support Files/Pods-Bible-BibleTests/Pods-Bible-BibleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D905A81524F4C05100F7A83F /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
+		D90908B32569E13200694335 /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
+		D90908B7256A42B100694335 /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
 		D92D33D124EB3E7D00545047 /* GyodokDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyodokDetailView.swift; sourceTree = "<group>"; };
 		D92D33D324EB7E2500545047 /* SongListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListView.swift; sourceTree = "<group>"; };
 		D92D33D724EB9AB100545047 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -116,7 +120,7 @@
 		D9B8CFF124DAB51E00890693 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D9B8CFF424DAB51E00890693 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9B8CFF624DAB51E00890693 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D9B8D00224DAB77600890693 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
+		D9B8D00224DAB77600890693 /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		D9B8D01924DC2C9B00890693 /* BibleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleListView.swift; sourceTree = "<group>"; };
 		D9C332A924E13B2400968023 /* holybible.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = holybible.db; sourceTree = "<group>"; };
 		D9C332B124E15F2700968023 /* VerseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseView.swift; sourceTree = "<group>"; };
@@ -191,6 +195,7 @@
 		D91E77842568AF1F0077D174 /* IAP */ = {
 			isa = PBXGroup;
 			children = (
+				D97E1A992568F15F00A30557 /* Configuration.storekit */,
 				D97E1A882568E19B00A30557 /* StoreManager.swift */,
 			);
 			path = IAP;
@@ -201,6 +206,7 @@
 			children = (
 				D9E0881C24EBF99600276FAE /* pinch.swift */,
 				D905A81524F4C05100F7A83F /* RoundedCorners.swift */,
+				D90908B32569E13200694335 /* Audio.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -209,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				D92D33DD24EBB42600545047 /* SettingView.swift */,
+				D90908B7256A42B100694335 /* BookmarkView.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -244,7 +251,6 @@
 		D9B8CFDC24DAB51A00890693 = {
 			isa = PBXGroup;
 			children = (
-				D97E1A992568F15F00A30557 /* Configuration.storekit */,
 				D962DEDD24FFAB3D00491EF5 /* .swiftlint.yml */,
 				D9B8CFE724DAB51B00890693 /* Bible */,
 				D9B8CFE624DAB51B00890693 /* Products */,
@@ -313,7 +319,7 @@
 		D9B8D01524DC238900890693 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				D9B8D00224DAB77600890693 /* DateConverter.swift */,
+				D9B8D00224DAB77600890693 /* Converter.swift */,
 				D92D33D724EB9AB100545047 /* Constants.swift */,
 			);
 			path = Extension;
@@ -643,7 +649,7 @@
 				D92D33D824EB9AB100545047 /* Constants.swift in Sources */,
 				D9DD7DBA24F14A64005F2A92 /* KeyboardLayoutConstraint.swift in Sources */,
 				D92D33DC24EB9BC100545047 /* SongImageView.swift in Sources */,
-				D9B8D00324DAB77600890693 /* DateConverter.swift in Sources */,
+				D9B8D00324DAB77600890693 /* Converter.swift in Sources */,
 				D9DD7DCC24F14A64005F2A92 /* AsyncButton.swift in Sources */,
 				D9DD7DD924F14A64005F2A92 /* LogoShareView.swift in Sources */,
 				D9DD7DC624F14A64005F2A92 /* Misc.swift in Sources */,
@@ -656,12 +662,14 @@
 				D9DD7DE224F14A64005F2A92 /* RadioStation.swift in Sources */,
 				D9DD7DE024F14A64005F2A92 /* AnimationFrames.swift in Sources */,
 				D9DD7DC524F14A64005F2A92 /* SpringTextView.swift in Sources */,
+				D90908B42569E13200694335 /* Audio.swift in Sources */,
 				D9DD7DCE24F14A64005F2A92 /* SpringLabel.swift in Sources */,
 				D9DD7DC424F14A64005F2A92 /* SpringButton.swift in Sources */,
 				D9E0881D24EBF99600276FAE /* pinch.swift in Sources */,
 				D905A81624F4C05100F7A83F /* RoundedCorners.swift in Sources */,
 				D92D33DA24EB9B8000545047 /* SongDetailView.swift in Sources */,
 				D9DD7DB924F14A64005F2A92 /* DesignableImageView.swift in Sources */,
+				D90908B8256A42B100694335 /* BookmarkView.swift in Sources */,
 				D9DD7DD024F14A64005F2A92 /* AutoTextView.swift in Sources */,
 				D9DD7DCA24F14A64005F2A92 /* DesignableView.swift in Sources */,
 				D9DD7DC724F14A64005F2A92 /* SpringView.swift in Sources */,

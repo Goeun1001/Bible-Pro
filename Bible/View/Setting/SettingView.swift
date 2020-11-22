@@ -41,6 +41,11 @@ struct SettingView: View {
                     .frame(width: 90)
                 }
             }
+            Section(header: Text("북마크")) {
+                NavigationLink(destination: BookmarkView()) {
+                    Text("북마크함")
+                }
+            }
             Section(header: Text("구매")) {
                 ForEach(storeManager.myProducts, id: \.self) { product in
                     HStack {
@@ -68,8 +73,8 @@ struct SettingView: View {
                 }
             }
         }
-//        .listStyle(GroupedListStyle())
-//        .environment(\.horizontalSizeClass, .regular)
+        .listStyle(GroupedListStyle())
+        .environment(\.horizontalSizeClass, .regular)
         .navigationBarTitle("설정")
     }
 }

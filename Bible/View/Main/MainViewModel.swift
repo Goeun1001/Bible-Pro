@@ -18,6 +18,8 @@ class MainViewModel: ObservableObject {
     @Published var isOld = ""
     @Published var bibleStatus = ""
     
+    @Published  var realNum = ""
+    
     init() {
         getVerse()
         getBibles()
@@ -39,6 +41,12 @@ class MainViewModel: ObservableObject {
         self.verses = readVerses("SELECT * FROM verses where bcode = '\(bcode)' AND cnum = '\(cnum)' AND vcode = '\(vcode)'")
         
         getBibleName()
+    }
+    
+    func getNum() {
+        let bcode = UserDefaults.standard.value(forKey: "bcode") as! String
+        let cnum = UserDefaults.standard.value(forKey: "cnum") as! String
+        self.realNum = Converter().getBibleName(bcode: bcode, cnum: cnum)
     }
     
     func getBibleName() {

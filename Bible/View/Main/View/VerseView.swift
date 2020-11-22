@@ -7,6 +7,7 @@
 //
 import SwiftUI
 import StoreKit
+import AVFoundation
 
 struct VerseView: View {
     
@@ -15,12 +16,60 @@ struct VerseView: View {
     @State private var offset = CGSize.zero
     @State private var float = true
     @State var inline = false
+    @State var ShareSheet = false
+    
+    let player = AVPlayer()
+    @State var playing = false
+    
+    func playRadio() {
+        player.play()
+//        player.playImmediately(atRate: 0.925)
+    }
+    
+    func pauseRadio() {
+        player.pause()
+    }
     
     var body: some View {
         NavigationView {
             ZStack(alignment: .bottom) {
                 GeometryReader { _ in
                     List {
+                        if UserDefaults.standard.bool(forKey: "purchased") {
+                            HStack(spacing: 5) {
+                                Image(systemName: playing ? "pause.circle" : "play.circle")
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                    .onTapGesture {
+                                        if self.playing == false {
+                                            self.playRadio()
+                                        }
+                                        if self.playing == true {
+                                            self.pauseRadio()
+                                        }
+                                        self.playing.toggle()
+                                }
+                                AudioPlayerControlsView(player: player,
+                                timeObserver: PlayerTimeObserver(player: player),
+                                durationObserver: PlayerDurationObserver(player: player),
+                                itemObserver: PlayerItemObserver(player: player))
+                            }.padding(.leading, 15)
+                            .padding(.trailing, 15)
+                        } else {
+                            VStack(alignment: .center, spacing: -10) {
+                                HStack(spacing: 5) {
+                                    Image(systemName: playing ? "pause.circle" : "play.circle")
+                                        .resizable()
+                                        .frame(width: 30, height: 30)
+                                        
+                                    AudioPlayerControlsView(player: player,
+                                    timeObserver: PlayerTimeObserver(player: player),
+                                    durationObserver: PlayerDurationObserver(player: player),
+                                    itemObserver: PlayerItemObserver(player: player))
+                                }.padding(.leading, 15)
+                                .padding(.trailing, 15)
+                            }.foregroundColor(.gray)
+                        }
                         ForEach(self.verseVM.verses, id: \.id) { verse in
                             HStack {
                                 VStack {
@@ -28,6 +77,23 @@ struct VerseView: View {
                                     Spacer()
                                 }
                                 Text(verse.content)
+                            }.contextMenu {
+                                Button(action: {
+                                    self.ShareSheet = true
+                                    
+                                    let text = verse.content
+                                    let av = UIActivityViewController(activityItems: [text], applicationActivities: nil)
+                                    UIApplication.shared.windows.first?.rootViewController?.present(av, animated: true, completion: nil)
+                                }) {
+                                    Text("Share")
+                                    Image(systemName: "square.and.arrow.up")
+                                }
+                                Button(action: {
+                                    
+                                }) {
+                                    Image(systemName: "heart.fill")
+                                    Text("Bookmark")
+                                }
                             }
                         }
                     }
@@ -36,9 +102,13 @@ struct VerseView: View {
                         .onChanged { gesture in
                             self.offset = gesture.translation
                             if self.offset.height >= 0 {
+                                withAnimation {
                                 self.float = true
+                                }
                             } else if self.offset.height < 0 {
+                                withAnimation {
                                 self.float = false
+                                }
                             }
                         }
                 )
@@ -75,12 +145,22 @@ struct VerseView: View {
                     }.padding(.top, 10)
                     .padding(.bottom, 5)
                     .background(RoundedCorners(color: Color("Gray"), tl: 25, tr: 25, bl: 0, br: 0).shadow(radius: 3).edgesIgnoringSafeArea(.bottom))
-                    
+                    .transition(.move(edge: .bottom))
                 }
             }
             .onAppear {
                 self.verseVM.getVerse()
+                self.verseVM.getNum()
                 self.inline = false
+                guard let url = URL(string: "https://bible.jeonggo.com/audio/\(self.verseVM.realNum).mp3") else {
+                    return
+                }
+                let playerItem = AVPlayerItem(url: url)
+                self.player.volume = 2
+                self.player.replaceCurrentItem(with: playerItem)
+            }
+            .onDisappear {
+                self.player.replaceCurrentItem(with: nil)
             }
             .navigationBarTitle(Text("\(self.verseVM.bibleName.name) \(self.verseVM.verses.first?.cnum ?? "0")장"), displayMode: inline ? .inline : .automatic)
             .navigationBarItems(trailing:
@@ -95,6 +175,13 @@ struct VerseView: View {
                                                     UserDefaults.standard.set("\(minus)", forKey: "cnum")
                                                     UserDefaults.standard.synchronize()
                                                     self.verseVM.getVerse()
+                                                    self.verseVM.getNum()
+                                                    guard let url = URL(string: "https://bible.jeonggo.com/audio/\(self.verseVM.realNum).mp3") else {
+                                                        return
+                                                    }
+                                                    let playerItem = AVPlayerItem(url: url)
+                                                    self.player.volume = 2
+                                                    self.player.replaceCurrentItem(with: playerItem)
                                                 }
                                             }
                                         imageView(imageName: "arrowtriangle.right", isSystem: true)
@@ -104,6 +191,13 @@ struct VerseView: View {
                                                     UserDefaults.standard.set("\(plus)", forKey: "cnum")
                                                     UserDefaults.standard.synchronize()
                                                     self.verseVM.getVerse()
+                                                    self.verseVM.getNum()
+                                                    guard let url = URL(string: "https://bible.jeonggo.com/audio/\(self.verseVM.realNum).mp3") else {
+                                                        return
+                                                    }
+                                                    let playerItem = AVPlayerItem(url: url)
+                                                    self.player.volume = 2
+                                                    self.player.replaceCurrentItem(with: playerItem)
                                                 }
                                             }
                                     })
