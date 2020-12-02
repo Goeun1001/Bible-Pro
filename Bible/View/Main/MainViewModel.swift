@@ -54,4 +54,19 @@ class MainViewModel: ObservableObject {
         let vcode = UserDefaults.standard.value(forKey: "vcode") as! String
         self.bibleName = readBibles("SELECT * FROM bibles where vcode = '\(vcode)' AND bcode = '\(bcode)'").first!
     }
+    
+    func bookmark(id: Int) {
+        let bcode = UserDefaults.standard.value(forKey: "bcode") as! String
+        let vcode = UserDefaults.standard.value(forKey: "vcode") as! String
+        let cnum = UserDefaults.standard.value(forKey: "cnum") as! String
+        updateBookmark("UPDATE verses set bookmarked = 1 where vnum = \(id) AND bcode = '\(bcode)' AND cnum = '\(cnum)' AND vcode = '\(vcode)'")
+    }
+    
+    func unBookmark(id: Int) {
+        let bcode = UserDefaults.standard.value(forKey: "bcode") as! String
+        let vcode = UserDefaults.standard.value(forKey: "vcode") as! String
+        let cnum = UserDefaults.standard.value(forKey: "cnum") as! String
+        updateBookmark("UPDATE verses set bookmarked = 0 where vnum = \(id) AND bcode = '\(bcode)' AND cnum = '\(cnum)' AND vcode = '\(vcode)'")
+    }
+    
 }

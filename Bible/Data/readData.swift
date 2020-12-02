@@ -25,8 +25,8 @@ func readBibles(_ queryString: String) -> [Bible] {
     
     var db: OpaquePointer?
     
-//    let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-//        .appendingPathComponent("holybible.db")
+    //    let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+    //        .appendingPathComponent("holybible.db")
     
     let fileURL = FileManager.default
         .containerURL(forSecurityApplicationGroupIdentifier: "group.com.jeonggo.sqlite")!.appendingPathComponent("holybible.db")
@@ -42,7 +42,7 @@ func readBibles(_ queryString: String) -> [Bible] {
     if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK {
         let errmsg = String(cString: sqlite3_errmsg(db)!)
         print("error preparing insert: \(errmsg)")
-//            return
+        //            return
     }
     
     while sqlite3_step(stmt) == SQLITE_ROW {
@@ -234,4 +234,29 @@ func getDate() -> Int {
     formatter.dateFormat = "DD"
     let defaultTimeZoneStr = formatter.string(from: Date())
     return Int(defaultTimeZoneStr)!
+}
+
+func updateBookmark(_ queryString: String) {
+    var db: OpaquePointer?
+    
+    let fileURL = FileManager.default
+        .containerURL(forSecurityApplicationGroupIdentifier: "group.com.jeonggo.sqlite")!.appendingPathComponent("holybible.db")
+    
+    if sqlite3_open(fileURL.path, &db) != SQLITE_OK {
+        print("error opening database")
+    }
+    
+    var stmt: OpaquePointer?
+    
+    if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK {
+        let errmsg = String(cString: sqlite3_errmsg(db)!)
+        print("error preparing insert: \(errmsg)")
+    }
+    
+    if sqlite3_step(stmt) != SQLITE_DONE {
+        let errmsg = String(cString: sqlite3_errmsg(db)!)
+        print("삽입하는데 실패했다: \(errmsg)")
+        return
+    }
+    
 }

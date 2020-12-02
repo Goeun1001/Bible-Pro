@@ -23,7 +23,7 @@ struct VerseView: View {
     
     func playRadio() {
         player.play()
-//        player.playImmediately(atRate: 0.925)
+        //        player.playImmediately(atRate: 0.925)
     }
     
     func pauseRadio() {
@@ -48,11 +48,11 @@ struct VerseView: View {
                                             self.pauseRadio()
                                         }
                                         self.playing.toggle()
-                                }
+                                    }
                                 AudioPlayerControlsView(player: player,
-                                timeObserver: PlayerTimeObserver(player: player),
-                                durationObserver: PlayerDurationObserver(player: player),
-                                itemObserver: PlayerItemObserver(player: player))
+                                                        timeObserver: PlayerTimeObserver(player: player),
+                                                        durationObserver: PlayerDurationObserver(player: player),
+                                                        itemObserver: PlayerItemObserver(player: player))
                             }.padding(.leading, 15)
                             .padding(.trailing, 15)
                         } else {
@@ -61,11 +61,11 @@ struct VerseView: View {
                                     Image(systemName: playing ? "pause.circle" : "play.circle")
                                         .resizable()
                                         .frame(width: 30, height: 30)
-                                        
+                                    
                                     AudioPlayerControlsView(player: player,
-                                    timeObserver: PlayerTimeObserver(player: player),
-                                    durationObserver: PlayerDurationObserver(player: player),
-                                    itemObserver: PlayerItemObserver(player: player))
+                                                            timeObserver: PlayerTimeObserver(player: player),
+                                                            durationObserver: PlayerDurationObserver(player: player),
+                                                            itemObserver: PlayerItemObserver(player: player))
                                 }.padding(.leading, 15)
                                 .padding(.trailing, 15)
                             }.foregroundColor(.gray)
@@ -79,17 +79,23 @@ struct VerseView: View {
                                 Text(verse.content)
                             }.contextMenu {
                                 Button(action: {
-                                    self.ShareSheet = true
-                                    
                                     let text = verse.content
                                     let av = UIActivityViewController(activityItems: [text], applicationActivities: nil)
+                                    
+                                    if let popoverController = av.popoverPresentationController {
+                                        popoverController.sourceRect = CGRect(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2, width: 0, height: 0)
+                                        popoverController.sourceView = UIApplication.shared.windows.first?.rootViewController?.view
+                                        popoverController.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
+                                    }
+                                    
+                                    //
                                     UIApplication.shared.windows.first?.rootViewController?.present(av, animated: true, completion: nil)
                                 }) {
                                     Text("Share")
                                     Image(systemName: "square.and.arrow.up")
                                 }
                                 Button(action: {
-                                    
+                                    verseVM.bookmark(id: Int(verse.vnum)!)
                                 }) {
                                     Image(systemName: "heart.fill")
                                     Text("Bookmark")
@@ -103,11 +109,11 @@ struct VerseView: View {
                             self.offset = gesture.translation
                             if self.offset.height >= 0 {
                                 withAnimation {
-                                self.float = true
+                                    self.float = true
                                 }
                             } else if self.offset.height < 0 {
                                 withAnimation {
-                                self.float = false
+                                    self.float = false
                                 }
                             }
                         }
@@ -205,7 +211,7 @@ struct VerseView: View {
         .accentColor(Color("Text"))
         .navigationViewStyle(StackNavigationViewStyle())
     }
-
+    
 }
 
 struct currentVerseView_Previews: PreviewProvider {
@@ -246,7 +252,7 @@ struct barView: View {
                 .foregroundColor(Color("Text"))
             Text(text)
                 .foregroundColor(Color("Text"))
-
+            
         }
     }
 }
