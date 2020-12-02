@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct BookmarkView: View {
-    @State var verses: [Verse]
+    @State var verses = [Verse]()
     
     var body: some View {
         List {
@@ -37,8 +37,8 @@ struct BookmarkView: View {
                     }
                 }
             }
-        }.onAppear() {
-            
+        }.onAppear {
+            self.verses = readVerses("SELECT * FROM berses where bookmarked = 1")
         }
     }
 }

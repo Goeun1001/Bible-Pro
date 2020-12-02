@@ -25,8 +25,11 @@ func readBibles(_ queryString: String) -> [Bible] {
     
     var db: OpaquePointer?
     
-    let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-        .appendingPathComponent("holybible.db")
+//    let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+//        .appendingPathComponent("holybible.db")
+    
+    let fileURL = FileManager.default
+        .containerURL(forSecurityApplicationGroupIdentifier: "group.com.jeonggo.sqlite")!.appendingPathComponent("holybible.db")
     
     if sqlite3_open(fileURL.path, &db) != SQLITE_OK {
         print("error opening database")
@@ -63,8 +66,8 @@ func readVerses(_ queryString: String) -> [Verse] {
     
     var db: OpaquePointer?
     
-    let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-        .appendingPathComponent("holybible.db")
+    let fileURL = FileManager.default
+        .containerURL(forSecurityApplicationGroupIdentifier: "group.com.jeonggo.sqlite")!.appendingPathComponent("holybible.db")
     
     if sqlite3_open(fileURL.path, &db) != SQLITE_OK {
         print("error opening database")
@@ -101,8 +104,8 @@ func readDaily(_ queryString: String) -> [Daily] {
     
     var db: OpaquePointer?
     
-    let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-        .appendingPathComponent("holybible.db")
+    let fileURL = FileManager.default
+        .containerURL(forSecurityApplicationGroupIdentifier: "group.com.jeonggo.sqlite")!.appendingPathComponent("holybible.db")
     
     if sqlite3_open(fileURL.path, &db) != SQLITE_OK {
         print("error opening database")
@@ -135,8 +138,8 @@ func readGyodok(_ queryString: String) -> [Gyodok] {
     
     var db: OpaquePointer?
     
-    let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-        .appendingPathComponent("holybible.db")
+    let fileURL = FileManager.default
+        .containerURL(forSecurityApplicationGroupIdentifier: "group.com.jeonggo.sqlite")!.appendingPathComponent("holybible.db")
     
     if sqlite3_open(fileURL.path, &db) != SQLITE_OK {
         print("error opening database")
@@ -171,8 +174,8 @@ func readSong(_ queryString: String) -> [Song] {
     
     var db: OpaquePointer?
     
-    let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-        .appendingPathComponent("holybible.db")
+    let fileURL = FileManager.default
+        .containerURL(forSecurityApplicationGroupIdentifier: "group.com.jeonggo.sqlite")!.appendingPathComponent("holybible.db")
     
     if sqlite3_open(fileURL.path, &db) != SQLITE_OK {
         print("error opening database")

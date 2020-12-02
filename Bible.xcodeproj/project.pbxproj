@@ -32,8 +32,15 @@
 		D9B8CFF524DAB51E00890693 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B8CFF324DAB51E00890693 /* LaunchScreen.storyboard */; };
 		D9B8D00324DAB77600890693 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8D00224DAB77600890693 /* Converter.swift */; };
 		D9B8D01A24DC2C9B00890693 /* BibleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8D01924DC2C9B00890693 /* BibleListView.swift */; };
+		D9C10C0F25779CD900081F2A /* holybible.db in Resources */ = {isa = PBXBuildFile; fileRef = D9C10C0E25779CD900081F2A /* holybible.db */; };
+		D9C10C612577A69500081F2A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C10C2625779E1300081F2A /* WidgetKit.framework */; };
+		D9C10C622577A69500081F2A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C10C2825779E1300081F2A /* SwiftUI.framework */; };
+		D9C10C652577A69500081F2A /* DailyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C10C642577A69500081F2A /* DailyWidget.swift */; };
+		D9C10C672577A69800081F2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9C10C662577A69800081F2A /* Assets.xcassets */; };
+		D9C10C6B2577A69800081F2A /* DailyWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D9C10C602577A69500081F2A /* DailyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D9C10C712577AA5C00081F2A /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D984CBFD2567CD04000F064F /* DataModel.swift */; };
+		D9C10C742577AA6000081F2A /* readData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D984CBF82567CCE9000F064F /* readData.swift */; };
 		D9C332B224E15F2700968023 /* VerseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C332B124E15F2700968023 /* VerseView.swift */; };
-		D9C332B524E1638100968023 /* holybible.db in Resources */ = {isa = PBXBuildFile; fileRef = D9C332A924E13B2400968023 /* holybible.db */; };
 		D9C332C024E181CD00968023 /* NumberListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C332BF24E181CD00968023 /* NumberListView.swift */; };
 		D9DD7DAF24F14A64005F2A92 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DD7D7324F14A64005F2A92 /* DataManager.swift */; };
 		D9DD7DB124F14A64005F2A92 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DD7D7524F14A64005F2A92 /* Track.swift */; };
@@ -87,6 +94,30 @@
 		D9E0881D24EBF99600276FAE /* pinch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E0881C24EBF99600276FAE /* pinch.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D9C10C692577A69800081F2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9B8CFDD24DAB51A00890693 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9C10C5F2577A69500081F2A;
+			remoteInfo = DailyWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D9C10C3925779E1500081F2A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D9C10C6B2577A69800081F2A /* DailyWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		040F177356E1A3732CDC08DE /* Pods-Bible.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bible.debug.xcconfig"; path = "Target Support Files/Pods-Bible/Pods-Bible.debug.xcconfig"; sourceTree = "<group>"; };
 		435A21E47167074F7D9B942F /* Pods-Bible.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bible.release.xcconfig"; path = "Target Support Files/Pods-Bible/Pods-Bible.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,7 +153,14 @@
 		D9B8CFF624DAB51E00890693 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9B8D00224DAB77600890693 /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		D9B8D01924DC2C9B00890693 /* BibleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleListView.swift; sourceTree = "<group>"; };
-		D9C332A924E13B2400968023 /* holybible.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = holybible.db; sourceTree = "<group>"; };
+		D9C10C0E25779CD900081F2A /* holybible.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = holybible.db; sourceTree = "<group>"; };
+		D9C10C2625779E1300081F2A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		D9C10C2825779E1300081F2A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		D9C10C602577A69500081F2A /* DailyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DailyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9C10C642577A69500081F2A /* DailyWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWidget.swift; sourceTree = "<group>"; };
+		D9C10C662577A69800081F2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D9C10C682577A69800081F2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9C10C7C2577D03F00081F2A /* Daily Bible.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Daily Bible.entitlements"; sourceTree = "<group>"; };
 		D9C332B124E15F2700968023 /* VerseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseView.swift; sourceTree = "<group>"; };
 		D9C332BF24E181CD00968023 /* NumberListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberListView.swift; sourceTree = "<group>"; };
 		D9DD7D7324F14A64005F2A92 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -186,6 +224,15 @@
 			files = (
 				8050A40B9A5A725420B971CD /* Pods_Bible.framework in Frameworks */,
 				D984CBE22567CB44000F064F /* StoreKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9C10C5D2577A69500081F2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9C10C622577A69500081F2A /* SwiftUI.framework in Frameworks */,
+				D9C10C612577A69500081F2A /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +300,7 @@
 			children = (
 				D962DEDD24FFAB3D00491EF5 /* .swiftlint.yml */,
 				D9B8CFE724DAB51B00890693 /* Bible */,
+				D9C10C632577A69500081F2A /* DailyWidget */,
 				D9B8CFE624DAB51B00890693 /* Products */,
 				E196A354CC8A4B952AB87177 /* Pods */,
 				E00A58D7E858D7F11BF657A2 /* Frameworks */,
@@ -263,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				D9B8CFE524DAB51B00890693 /* Daily Bible.app */,
+				D9C10C602577A69500081F2A /* DailyWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -270,13 +319,14 @@
 		D9B8CFE724DAB51B00890693 /* Bible */ = {
 			isa = PBXGroup;
 			children = (
+				D9C10C7C2577D03F00081F2A /* Daily Bible.entitlements */,
 				D91E77842568AF1F0077D174 /* IAP */,
 				D984CBF72567CCDA000F064F /* Data */,
 				D9B8D01524DC238900890693 /* Extension */,
 				D9B8D00724DAB8E400890693 /* View */,
 				D9B8CFE824DAB51B00890693 /* AppDelegate.swift */,
 				D9B8CFEA24DAB51B00890693 /* SceneDelegate.swift */,
-				D9C332A924E13B2400968023 /* holybible.db */,
+				D9C10C0E25779CD900081F2A /* holybible.db */,
 				D9B8CFEE24DAB51E00890693 /* Assets.xcassets */,
 				D9B8CFF324DAB51E00890693 /* LaunchScreen.storyboard */,
 				D9B8CFF624DAB51E00890693 /* Info.plist */,
@@ -323,6 +373,16 @@
 				D92D33D724EB9AB100545047 /* Constants.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		D9C10C632577A69500081F2A /* DailyWidget */ = {
+			isa = PBXGroup;
+			children = (
+				D9C10C642577A69500081F2A /* DailyWidget.swift */,
+				D9C10C662577A69800081F2A /* Assets.xcassets */,
+				D9C10C682577A69800081F2A /* Info.plist */,
+			);
+			path = DailyWidget;
 			sourceTree = "<group>";
 		};
 		D9C332BB24E1791600968023 /* View */ = {
@@ -480,6 +540,8 @@
 				D984CBE12567CB44000F064F /* StoreKit.framework */,
 				9C63845989443F2067BE0D85 /* Pods_Bible.framework */,
 				5181764AF16076F6D80E0F8D /* Pods_Bible_BibleTests.framework */,
+				D9C10C2625779E1300081F2A /* WidgetKit.framework */,
+				D9C10C2825779E1300081F2A /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -508,15 +570,34 @@
 				D9B8CFE324DAB51B00890693 /* Resources */,
 				D962DEDC24FFAB2D00491EF5 /* Run Script */,
 				457BC0280295D3414215EDA0 /* [CP] Embed Pods Frameworks */,
+				D9C10C3925779E1500081F2A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D9C10C6A2577A69800081F2A /* PBXTargetDependency */,
 			);
 			name = Bible;
 			productName = Bible;
 			productReference = D9B8CFE524DAB51B00890693 /* Daily Bible.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D9C10C5F2577A69500081F2A /* DailyWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9C10C6C2577A69800081F2A /* Build configuration list for PBXNativeTarget "DailyWidgetExtension" */;
+			buildPhases = (
+				D9C10C5C2577A69500081F2A /* Sources */,
+				D9C10C5D2577A69500081F2A /* Frameworks */,
+				D9C10C5E2577A69500081F2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DailyWidgetExtension;
+			productName = DailyWidgetExtension;
+			productReference = D9C10C602577A69500081F2A /* DailyWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -530,6 +611,9 @@
 				TargetAttributes = {
 					D9B8CFE424DAB51B00890693 = {
 						CreatedOnToolsVersion = 11.6;
+					};
+					D9C10C5F2577A69500081F2A = {
+						CreatedOnToolsVersion = 12.2;
 					};
 				};
 			};
@@ -548,6 +632,7 @@
 			projectRoot = "";
 			targets = (
 				D9B8CFE424DAB51B00890693 /* Bible */,
+				D9C10C5F2577A69500081F2A /* DailyWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -559,7 +644,6 @@
 			files = (
 				D962DEDE24FFAB3D00491EF5 /* .swiftlint.yml in Resources */,
 				D978FB6225064DA500B50F53 /* InfoPlist.strings in Resources */,
-				D9C332B524E1638100968023 /* holybible.db in Resources */,
 				D9B8CFF524DAB51E00890693 /* LaunchScreen.storyboard in Resources */,
 				D9DD7DD724F14A64005F2A92 /* Main.storyboard in Resources */,
 				D9B8CFF224DAB51E00890693 /* Preview Assets.xcassets in Resources */,
@@ -568,6 +652,15 @@
 				D9DD7DB224F14A64005F2A92 /* NothingFoundCell.xib in Resources */,
 				D9DD7DCD24F14A64005F2A92 /* LoadingView.xib in Resources */,
 				D9B8CFEF24DAB51E00890693 /* Assets.xcassets in Resources */,
+				D9C10C0F25779CD900081F2A /* holybible.db in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9C10C5E2577A69500081F2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9C10C672577A69800081F2A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,7 +799,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D9C10C5C2577A69500081F2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9C10C652577A69500081F2A /* DailyWidget.swift in Sources */,
+				D9C10C712577AA5C00081F2A /* DataModel.swift in Sources */,
+				D9C10C742577AA6000081F2A /* readData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D9C10C6A2577A69800081F2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9C10C5F2577A69500081F2A /* DailyWidgetExtension */;
+			targetProxy = D9C10C692577A69800081F2A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D978FB6425064DA500B50F53 /* InfoPlist.strings */ = {
@@ -849,7 +960,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 040F177356E1A3732CDC08DE /* Pods-Bible.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Bible/Daily Bible.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Bible/Preview Content\"";
@@ -861,7 +974,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jeonggo.BiblePro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeonggo.Bible;
 				PRODUCT_NAME = "Daily Bible";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -872,11 +985,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 435A21E47167074F7D9B942F /* Pods-Bible.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Bible/Daily Bible.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Bible/Preview Content\"";
-				DEVELOPMENT_TEAM = TUK4G5QM6Q;
+				DEVELOPMENT_TEAM = C2JSJLJ4FN;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Bible/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -886,6 +1001,52 @@
 				MARKETING_VERSION = 1.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeonggo.Bible;
 				PRODUCT_NAME = "Daily Bible";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D9C10C6D2577A69800081F2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C2JSJLJ4FN;
+				INFOPLIST_FILE = DailyWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeonggo.Bible.DailyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D9C10C6E2577A69800081F2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C2JSJLJ4FN;
+				INFOPLIST_FILE = DailyWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeonggo.Bible.DailyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -908,6 +1069,15 @@
 			buildConfigurations = (
 				D9B8CFFA24DAB51E00890693 /* Debug */,
 				D9B8CFFB24DAB51E00890693 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9C10C6C2577A69800081F2A /* Build configuration list for PBXNativeTarget "DailyWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9C10C6D2577A69800081F2A /* Debug */,
+				D9C10C6E2577A69800081F2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

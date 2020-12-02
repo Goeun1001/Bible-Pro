@@ -20,8 +20,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
         let fileManager = FileManager.default
+//
+//        guard let documentsUrl = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
         
-        guard let documentsUrl = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
+        guard let documentsUrl = FileManager.default
+            .containerURL(forSecurityApplicationGroupIdentifier: "group.com.jeonggo.sqlite") else {
+                return
+        }
         
         let finalDatabaseURL = documentsUrl.appendingPathComponent("holybible.db")
         
