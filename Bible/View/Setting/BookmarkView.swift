@@ -30,6 +30,18 @@ struct BookmarkView: View {
                             Text("\(verse.vnum)절")
                         }.foregroundColor(.gray)
                     }
+                    Spacer()
+                    ZStack(alignment: .center) {
+                        Circle().foregroundColor(.red)
+                        Image(systemName: "minus").foregroundColor(.white)
+                    }.frame(width: 18, height: 18)
+                    .onTapGesture {
+                        verseVM.unBookmark(id: Int(verse.vnum)!)
+                        withAnimation {
+                            self.read()
+                        }
+                    }
+                    
                 }.padding([.top, .bottom], 5)
                 .contextMenu {
                     Button(action: {
@@ -48,7 +60,9 @@ struct BookmarkView: View {
                     }
                     Button(action: {
                         verseVM.unBookmark(id: Int(verse.vnum)!)
-                        self.read()
+                        withAnimation {
+                            self.read()
+                        }
                     }) {
                         Image(systemName: "heart.fill")
                         Text("unBookmark")

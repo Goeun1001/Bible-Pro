@@ -42,6 +42,12 @@
 		D9C10C742577AA6000081F2A /* readData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D984CBF82567CCE9000F064F /* readData.swift */; };
 		D9C332B224E15F2700968023 /* VerseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C332B124E15F2700968023 /* VerseView.swift */; };
 		D9C332C024E181CD00968023 /* NumberListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C332BF24E181CD00968023 /* NumberListView.swift */; };
+		D9D81DB62578CEEE00E99A6A /* Bible_macApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D81DB52578CEEE00E99A6A /* Bible_macApp.swift */; };
+		D9D81DB82578CEEE00E99A6A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D81DB72578CEEE00E99A6A /* ContentView.swift */; };
+		D9D81DBA2578CEF000E99A6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9D81DB92578CEF000E99A6A /* Assets.xcassets */; };
+		D9D81DBD2578CEF000E99A6A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9D81DBC2578CEF000E99A6A /* Preview Assets.xcassets */; };
+		D9D81DCD2578CF8700E99A6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D81DCC2578CF8700E99A6A /* AppDelegate.swift */; };
+		D9D81DDF2578D19D00E99A6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9D81DDD2578D19D00E99A6A /* Main.storyboard */; };
 		D9DD7DAF24F14A64005F2A92 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DD7D7324F14A64005F2A92 /* DataManager.swift */; };
 		D9DD7DB124F14A64005F2A92 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DD7D7524F14A64005F2A92 /* Track.swift */; };
 		D9DD7DB224F14A64005F2A92 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9DD7D7624F14A64005F2A92 /* NothingFoundCell.xib */; };
@@ -163,6 +169,15 @@
 		D9C10C7C2577D03F00081F2A /* Daily Bible.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Daily Bible.entitlements"; sourceTree = "<group>"; };
 		D9C332B124E15F2700968023 /* VerseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseView.swift; sourceTree = "<group>"; };
 		D9C332BF24E181CD00968023 /* NumberListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberListView.swift; sourceTree = "<group>"; };
+		D9D81DB32578CEEE00E99A6A /* Bible-mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bible-mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9D81DB52578CEEE00E99A6A /* Bible_macApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bible_macApp.swift; sourceTree = "<group>"; };
+		D9D81DB72578CEEE00E99A6A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D9D81DB92578CEF000E99A6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D9D81DBC2578CEF000E99A6A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D9D81DBE2578CEF000E99A6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9D81DBF2578CEF000E99A6A /* Bible_mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bible_mac.entitlements; sourceTree = "<group>"; };
+		D9D81DCC2578CF8700E99A6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Bible-Mac/AppDelegate.swift"; sourceTree = SOURCE_ROOT; };
+		D9D81DDE2578D19D00E99A6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Bible-Mac/Base.lproj/Main.storyboard"; sourceTree = SOURCE_ROOT; };
 		D9DD7D7324F14A64005F2A92 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		D9DD7D7524F14A64005F2A92 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		D9DD7D7624F14A64005F2A92 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
@@ -236,6 +251,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D9D81DB02578CEEE00E99A6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -301,6 +323,7 @@
 				D962DEDD24FFAB3D00491EF5 /* .swiftlint.yml */,
 				D9B8CFE724DAB51B00890693 /* Bible */,
 				D9C10C632577A69500081F2A /* DailyWidget */,
+				D9D81DB42578CEEE00E99A6A /* Bible-mac */,
 				D9B8CFE624DAB51B00890693 /* Products */,
 				E196A354CC8A4B952AB87177 /* Pods */,
 				E00A58D7E858D7F11BF657A2 /* Frameworks */,
@@ -312,6 +335,7 @@
 			children = (
 				D9B8CFE524DAB51B00890693 /* Daily Bible.app */,
 				D9C10C602577A69500081F2A /* DailyWidgetExtension.appex */,
+				D9D81DB32578CEEE00E99A6A /* Bible-mac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -393,6 +417,29 @@
 				D9C332BF24E181CD00968023 /* NumberListView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D9D81DB42578CEEE00E99A6A /* Bible-mac */ = {
+			isa = PBXGroup;
+			children = (
+				D9D81DB52578CEEE00E99A6A /* Bible_macApp.swift */,
+				D9D81DB72578CEEE00E99A6A /* ContentView.swift */,
+				D9D81DB92578CEF000E99A6A /* Assets.xcassets */,
+				D9D81DBE2578CEF000E99A6A /* Info.plist */,
+				D9D81DBF2578CEF000E99A6A /* Bible_mac.entitlements */,
+				D9D81DBB2578CEF000E99A6A /* Preview Content */,
+				D9D81DCC2578CF8700E99A6A /* AppDelegate.swift */,
+				D9D81DDD2578D19D00E99A6A /* Main.storyboard */,
+			);
+			path = "Bible-mac";
+			sourceTree = "<group>";
+		};
+		D9D81DBB2578CEF000E99A6A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D9D81DBC2578CEF000E99A6A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		D9DD7D7224F14A63005F2A92 /* Radio */ = {
@@ -599,6 +646,23 @@
 			productReference = D9C10C602577A69500081F2A /* DailyWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		D9D81DB22578CEEE00E99A6A /* Bible-mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9D81DC02578CEF000E99A6A /* Build configuration list for PBXNativeTarget "Bible-mac" */;
+			buildPhases = (
+				D9D81DAF2578CEEE00E99A6A /* Sources */,
+				D9D81DB02578CEEE00E99A6A /* Frameworks */,
+				D9D81DB12578CEEE00E99A6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bible-mac";
+			productName = "Bible-mac";
+			productReference = D9D81DB32578CEEE00E99A6A /* Bible-mac.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -613,6 +677,9 @@
 						CreatedOnToolsVersion = 11.6;
 					};
 					D9C10C5F2577A69500081F2A = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					D9D81DB22578CEEE00E99A6A = {
 						CreatedOnToolsVersion = 12.2;
 					};
 				};
@@ -633,6 +700,7 @@
 			targets = (
 				D9B8CFE424DAB51B00890693 /* Bible */,
 				D9C10C5F2577A69500081F2A /* DailyWidgetExtension */,
+				D9D81DB22578CEEE00E99A6A /* Bible-mac */,
 			);
 		};
 /* End PBXProject section */
@@ -661,6 +729,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9C10C672577A69800081F2A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9D81DB12578CEEE00E99A6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9D81DBD2578CEF000E99A6A /* Preview Assets.xcassets in Resources */,
+				D9D81DBA2578CEF000E99A6A /* Assets.xcassets in Resources */,
+				D9D81DDF2578D19D00E99A6A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -809,6 +887,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D9D81DAF2578CEEE00E99A6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9D81DCD2578CF8700E99A6A /* AppDelegate.swift in Sources */,
+				D9D81DB82578CEEE00E99A6A /* ContentView.swift in Sources */,
+				D9D81DB62578CEEE00E99A6A /* Bible_macApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -835,6 +923,14 @@
 				D978FB5F25064D6A00B50F53 /* ko */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D9D81DDD2578D19D00E99A6A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9D81DDE2578D19D00E99A6A /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1052,6 +1148,58 @@
 			};
 			name = Release;
 		};
+		D9D81DC12578CEF000E99A6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = "Bible-mac/Bible_mac.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Bible-mac/Preview Content\"";
+				DEVELOPMENT_TEAM = C2JSJLJ4FN;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Bible-mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeonggo.Bible-mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D9D81DC22578CEF000E99A6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = "Bible-mac/Bible_mac.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Bible-mac/Preview Content\"";
+				DEVELOPMENT_TEAM = C2JSJLJ4FN;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Bible-mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeonggo.Bible-mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1078,6 +1226,15 @@
 			buildConfigurations = (
 				D9C10C6D2577A69800081F2A /* Debug */,
 				D9C10C6E2577A69800081F2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9D81DC02578CEF000E99A6A /* Build configuration list for PBXNativeTarget "Bible-mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9D81DC12578CEF000E99A6A /* Debug */,
+				D9D81DC22578CEF000E99A6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
