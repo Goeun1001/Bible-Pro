@@ -16,7 +16,6 @@ target 'Bible-mac' do
   use_frameworks!
 
   # Pods for Bible
-pod 'WaterfallGrid'
 pod 'SwiftLint'
 
 end

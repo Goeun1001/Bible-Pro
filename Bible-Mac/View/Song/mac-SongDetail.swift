@@ -30,21 +30,24 @@ struct mac_SongDetail: View {
     }
     
     var body: some View {
-        ScrollView {
+//        ScrollVi ew {
             VStack(spacing: 10) {
                 Text("\(number)장 \(name)")
                     .font(.title)
                     .padding(.bottom, 20)
                 
-                NavigationLink(destination: mac_ImageView(number: realNum)) {
+//                NavigationLink(destination: mac_ImageView(number: realNum)) {
                     Image("\(realNum)")
                         .resizable()
                         .renderingMode(.original)
                         .aspectRatio(contentMode: .fit)
-                        .padding(.leading, 15)
-                        .padding(.trailing, 15)
-                        .shadow(radius: 5)
-                }
+                        .frame(minWidth: 400, minHeight: 400)
+                        .onTapGesture {
+                            UserDefaults.standard.set(realNum, forKey: "image")
+                            UserDefaults.standard.synchronize()
+                            NSApp.sendAction(#selector(AppDelegate.openImageWindow), to: nil, from:nil)
+                        }
+//                }
                 
                 if UserDefaults.standard.bool(forKey: "purchased") {
                     HStack(spacing: 5) {
@@ -85,7 +88,7 @@ struct mac_SongDetail: View {
                 }
             }.padding(.top, 20)
             .padding(.bottom, 20)
-        }
+//        }
         .onAppear {
             guard let url = URL(string: "https://bible.jeonggo.com/\(self.realNum).mp3") else {
                 return

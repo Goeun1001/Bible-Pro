@@ -51,12 +51,10 @@
 		D9D81DBD2578CEF000E99A6A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9D81DBC2578CEF000E99A6A /* Preview Assets.xcassets */; };
 		D9D81DCD2578CF8700E99A6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D81DCC2578CF8700E99A6A /* AppDelegate.swift */; };
 		D9D81E0A25792A3F00E99A6A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D984CC082567CEDD000F064F /* MainViewModel.swift */; };
-		D9D81E1925792AD000E99A6A /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97E1A882568E19B00A30557 /* StoreManager.swift */; };
 		D9D81E2625792BF200E99A6A /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D984CBFD2567CD04000F064F /* DataModel.swift */; };
 		D9D81E2E25792C3900E99A6A /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8D00224DAB77600890693 /* Converter.swift */; };
 		D9D81E33257A110C00E99A6A /* mac-VerseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D81E32257A110C00E99A6A /* mac-VerseView.swift */; };
 		D9D81E41257A112400E99A6A /* mac-BibleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D81E40257A112400E99A6A /* mac-BibleListView.swift */; };
-		D9D81E49257A120F00E99A6A /* NumberListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C332BF24E181CD00968023 /* NumberListView.swift */; };
 		D9D9B056257DD15D0037A4FA /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90908B32569E13200694335 /* Audio.swift */; };
 		D9D9B06D257DDDA00037A4FA /* mac-NumberListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D9B06C257DDDA00037A4FA /* mac-NumberListView.swift */; };
 		D9D9B075257DE5380037A4FA /* mac-TapBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D9B074257DE5380037A4FA /* mac-TapBar.swift */; };
@@ -66,6 +64,8 @@
 		D9D9B0C8257E04EF0037A4FA /* mac-SongList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D9B0C7257E04EF0037A4FA /* mac-SongList.swift */; };
 		D9D9B0DC257E05390037A4FA /* mac-SongDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D9B0DB257E05390037A4FA /* mac-SongDetail.swift */; };
 		D9D9B0E1257E05610037A4FA /* mac-ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D9B0E0257E05610037A4FA /* mac-ImageView.swift */; };
+		D9D9B10A257E148A0037A4FA /* mac-SongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D9B109257E148A0037A4FA /* mac-SongView.swift */; };
+		D9D9B12D257E35C00037A4FA /* mac-GyodokView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D9B12C257E35C00037A4FA /* mac-GyodokView.swift */; };
 		D9DD7DAF24F14A64005F2A92 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DD7D7324F14A64005F2A92 /* DataManager.swift */; };
 		D9DD7DB124F14A64005F2A92 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DD7D7524F14A64005F2A92 /* Track.swift */; };
 		D9DD7DB224F14A64005F2A92 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9DD7D7624F14A64005F2A92 /* NothingFoundCell.xib */; };
@@ -210,6 +210,8 @@
 		D9D9B0C7257E04EF0037A4FA /* mac-SongList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "mac-SongList.swift"; path = "Bible-Mac/View/Song/mac-SongList.swift"; sourceTree = SOURCE_ROOT; };
 		D9D9B0DB257E05390037A4FA /* mac-SongDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "mac-SongDetail.swift"; path = "Bible-Mac/View/Song/mac-SongDetail.swift"; sourceTree = SOURCE_ROOT; };
 		D9D9B0E0257E05610037A4FA /* mac-ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "mac-ImageView.swift"; path = "Bible-Mac/View/Song/mac-ImageView.swift"; sourceTree = SOURCE_ROOT; };
+		D9D9B109257E148A0037A4FA /* mac-SongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "mac-SongView.swift"; path = "Bible-Mac/View/Song/mac-SongView.swift"; sourceTree = SOURCE_ROOT; };
+		D9D9B12C257E35C00037A4FA /* mac-GyodokView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "mac-GyodokView.swift"; path = "Bible-Mac/View/Gyodok/mac-GyodokView.swift"; sourceTree = SOURCE_ROOT; };
 		D9DD7D7324F14A64005F2A92 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		D9DD7D7524F14A64005F2A92 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		D9DD7D7624F14A64005F2A92 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
@@ -512,6 +514,7 @@
 			children = (
 				D9D9B0B3257E03570037A4FA /* mac-gyodokDetail.swift */,
 				D9D9B0C1257E03AC0037A4FA /* mac-gyodokList.swift */,
+				D9D9B12C257E35C00037A4FA /* mac-GyodokView.swift */,
 			);
 			path = Gyodok;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 		D9D9B0C6257E04E30037A4FA /* Song */ = {
 			isa = PBXGroup;
 			children = (
+				D9D9B109257E148A0037A4FA /* mac-SongView.swift */,
 				D9D9B0C7257E04EF0037A4FA /* mac-SongList.swift */,
 				D9D9B0DB257E05390037A4FA /* mac-SongDetail.swift */,
 				D9D9B0E0257E05610037A4FA /* mac-ImageView.swift */,
@@ -741,7 +745,6 @@
 				D9D81DAF2578CEEE00E99A6A /* Sources */,
 				D9D81DB02578CEEE00E99A6A /* Frameworks */,
 				D9D81DB12578CEEE00E99A6A /* Resources */,
-				F45000A330DF6FB32668ACEA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -914,23 +917,6 @@
 			shellPath = /bin/sh;
 			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint autocorrect\n";
 		};
-		F45000A330DF6FB32668ACEA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Bible-mac/Pods-Bible-mac-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Bible-mac/Pods-Bible-mac-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bible-mac/Pods-Bible-mac-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1026,16 +1012,16 @@
 				D9D81E33257A110C00E99A6A /* mac-VerseView.swift in Sources */,
 				D9D9B0B4257E03570037A4FA /* mac-gyodokDetail.swift in Sources */,
 				D9D9B075257DE5380037A4FA /* mac-TapBar.swift in Sources */,
-				D9D81E1925792AD000E99A6A /* StoreManager.swift in Sources */,
+				D9D9B10A257E148A0037A4FA /* mac-SongView.swift in Sources */,
 				D9D9B0DC257E05390037A4FA /* mac-SongDetail.swift in Sources */,
 				D9D9B0AB257E02B70037A4FA /* mac-SettingView.swift in Sources */,
 				D9D9B0E1257E05610037A4FA /* mac-ImageView.swift in Sources */,
 				D9D81DCD2578CF8700E99A6A /* AppDelegate.swift in Sources */,
 				D9D81DB82578CEEE00E99A6A /* ContentView.swift in Sources */,
+				D9D9B12D257E35C00037A4FA /* mac-GyodokView.swift in Sources */,
 				D9D81E41257A112400E99A6A /* mac-BibleListView.swift in Sources */,
 				D9D9B06D257DDDA00037A4FA /* mac-NumberListView.swift in Sources */,
 				D9D81E2E25792C3900E99A6A /* Converter.swift in Sources */,
-				D9D81E49257A120F00E99A6A /* NumberListView.swift in Sources */,
 				D9D81E2625792BF200E99A6A /* DataModel.swift in Sources */,
 				D9D9B0C8257E04EF0037A4FA /* mac-SongList.swift in Sources */,
 				D91BE9D3257DB23F00502DA4 /* mac-readData.swift in Sources */,

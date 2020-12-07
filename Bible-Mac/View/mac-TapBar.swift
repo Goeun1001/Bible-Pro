@@ -8,17 +8,6 @@
 
 import SwiftUI
 
-//func showWindow() {
-//    var window:NSWindow
-//    window = NSWindow(
-//        contentRect: NSRect(x: 0, y: 0, width: 800, height: 600),
-//        styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
-//        backing: .buffered, defer: false)
-//    window.center()
-//    window.contentView = NSHostingView(rootView: mac_SongList())
-//    window.makeKeyAndOrderFront(nil)
-//}
-
 struct tabbar: Hashable, Codable {
     var image: String
     var text: String
@@ -35,43 +24,12 @@ struct mac_TapBar: View {
                         .frame(width: 30, height: 30)
                     Text(tabs[i].text)
                 }.onTapGesture {
-//                    showWindow()
+                    if i == 0 { NSApp.sendAction(#selector(AppDelegate.openSongWindow), to: nil, from:nil) }
+                    if i == 1 { NSApp.sendAction(#selector(AppDelegate.openGyodokView), to: nil, from:nil) }
+                    if i == 2 { NSApp.sendAction(#selector(AppDelegate.openSettingView), to: nil, from:nil) }
                 }
             }
         }
-        //        VStack(spacing: 50) {
-        //            NavigationLink(destination: mac_SongList()) {
-        //                VStack {
-        //                    Image("MusicBook")
-        //                        .resizable()
-        //                        .frame(width: 30, height: 30)
-        //                    Text("찬송가")
-        //                }
-        //            }
-        //
-        //            NavigationLink(destination: mac_gyodokList()) {
-        //                VStack {
-        //                    Image("Book")
-        //                        .resizable()
-        //                        .frame(width: 30, height: 30)
-        //                    Text("교독문")
-        //
-        //                }
-        //            }
-        //
-        //            //            NavigationLink(destination: CCMVCtoUI()) {
-        //            //                barView(imageName: "CCM", text: "CCM")
-        //            //            }
-        //
-        //            NavigationLink(destination: mac_SettingView()) {
-        //                VStack {
-        //                    Image("Settings")
-        //                        .resizable()
-        //                        .frame(width: 30, height: 30)
-        //                    Text("설정")
-        //                }
-        //            }
-        //        }
     }
 }
 
@@ -80,3 +38,4 @@ struct mac_TapBar_Previews: PreviewProvider {
         mac_TapBar()
     }
 }
+

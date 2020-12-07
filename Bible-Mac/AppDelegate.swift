@@ -12,11 +12,17 @@ import StoreKit
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
+    
     var window: NSWindow!
+    var songWindow: NSWindow!
+    var imageWindow: NSWindow!
+    var settingWindow: NSWindow!
+    var gyodokWindow: NSWindow!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Create the SwiftUI view that provides the window contents.
+        
+        // MARK: DB download
         
         let fileManager = FileManager.default
         
@@ -29,6 +35,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 print("DB does not exist in documents folder")
                 if let dbFilePath = Bundle.main.path(forResource: "holybible", ofType: "db") {
                     try fileManager.copyItem(atPath: dbFilePath, toPath: finalDatabaseURL.path)
+                    setUp()
                     
                 } else {
                     print("Uh oh - foo.db is not in the app bundle")
@@ -40,18 +47,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             print("Unable to copy foo.db: \(error)")
         }
         
-        setUp()
         
-        let storeManager = StoreManager()
         
-        SKPaymentQueue.default().add(storeManager)
-        storeManager.getProducts(productIDs: ["Audio_payment"])
+        // MARK: View Appear
         
         let contentView = ContentView()
-
-        // Create the window and set the content view.
+        
         window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
+            contentRect: NSRect(x: 0, y: 0, width: 900, height: 600),
             styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
             backing: .buffered, defer: false)
         window.center()
@@ -59,17 +62,81 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.contentView = NSHostingView(rootView: contentView)
         window.makeKeyAndOrderFront(nil)
     }
-
+    
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-
+    
+    @objc func openSongWindow() {
+        if nil == songWindow {
+            let songView = mac_SongView()
+            // Create the preferences window and set content
+            songWindow = NSWindow(
+                contentRect: NSRect(x: 0, y: 0, width: 900, height: 600),
+                styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
+                backing: .buffered,
+                defer: false)
+            songWindow.center()
+                            songWindow.setFrameAutosaveName("songView")
+            songWindow.isReleasedWhenClosed = false
+            songWindow.contentView = NSHostingView(rootView: songView)
+        }
+        songWindow.makeKeyAndOrderFront(nil)
+    }
+    
+    @objc func openImageWindow() {
+        let imageView = mac_ImageView()
+        // Create the preferences window and set content
+        imageWindow = NSWindow(
+            contentRect: NSRect(x: 0, y: 0, width: 900, height: 600),
+            styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
+            backing: .buffered,
+            defer: false)
+        imageWindow.center()
+        imageWindow.setFrameAutosaveName("imageView")
+        imageWindow.isReleasedWhenClosed = false
+        imageWindow.contentView = NSHostingView(rootView: imageView)
+        imageWindow.makeKeyAndOrderFront(nil)
+    }
+    
+    @objc func openSettingView() {
+        if nil == settingWindow {
+            let settingView = mac_SettingView()
+            // Create the preferences window and set content
+            settingWindow = NSWindow(
+                contentRect: NSRect(x: 0, y: 0, width: 300, height: 300),
+                styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
+                backing: .buffered,
+                defer: false)
+            settingWindow.center()
+            settingWindow.setFrameAutosaveName("settingView")
+            settingWindow.isReleasedWhenClosed = false
+            settingWindow.contentView = NSHostingView(rootView: settingView)
+        }
+        settingWindow.makeKeyAndOrderFront(nil)
+    }
+    
+    @objc func openGyodokView() {
+        if nil == gyodokWindow {
+            let gyodokView = mac_GyodokView()
+            // Create the preferences window and set content
+            gyodokWindow = NSWindow(
+                contentRect: NSRect(x: 0, y: 0, width: 900, height: 600),
+                styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
+                backing: .buffered,
+                defer: false)
+            gyodokWindow.center()
+            gyodokWindow.setFrameAutosaveName("gyodokView")
+            gyodokWindow.isReleasedWhenClosed = false
+            gyodokWindow.contentView = NSHostingView(rootView: gyodokView)
+        }
+        gyodokWindow.makeKeyAndOrderFront(nil)
+    }
+    
 }
 
 func setUp() {
     UserDefaults.standard.set("GAE", forKey: "vcode")
-    UserDefaults.standard.set("1", forKey: "bcode")
-    UserDefaults.standard.set("1", forKey: "cnum")
     UserDefaults.standard.set("old", forKey: "type")
     UserDefaults.standard.set(0, forKey: "selectedIndex")
     UserDefaults.standard.synchronize()

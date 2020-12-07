@@ -19,6 +19,8 @@ struct mac_gyodokList: View {
         VStack {
             HStack {
                 Image("search")
+                    .resizable()
+                    .frame(width: 10, height: 10)
                 TextField("Search", text: $search, onEditingChanged: { changed in
                     if changed == false {
                         if self.search == "" {
