@@ -1,0 +1,52 @@
+//
+//  BibleList.swift
+//  Bible
+//
+//  Created by jge on 2020/08/06.
+//  Copyright © 2020 jge. All rights reserved.
+//
+
+import SwiftUI
+
+struct mac_BibleListView: View {
+    @Environment(\.colorScheme) var colorScheme
+    
+    @ObservedObject private var bibleVM = MainViewModel()
+    
+    var body: some View {
+        List((bibleVM.isOld == "old") ? bibleVM.oldBibles : bibleVM.newBibles, id: \.id) { bible in
+            NavigationLink(destination: mac_NumberListView(bcode: bible.bcode, chapter_num: bible.chapter_count, name: bible.name)) {
+                HStack {
+                    Text(bibleVM.isOld == "old" ? String(bible.bcode) : String(bible.bcode - 39))
+                    Text(bible.name)
+                }
+                .padding(.top, 10)
+                .padding(.bottom, 10)
+            }
+//            .navigationBarTitle("\(bibleVM.bibleStatus)성경 선택", displayMode: .automatic)
+//            .navigationBarItems(trailing:
+//                HStack(spacing: 20) {
+//                    Text("구약")
+//                        .foregroundColor(bibleVM.isOld == "old" ? Color("Text") : .gray)
+//                        .onTapGesture(count: 1) {
+//                            UserDefaults.standard.set("old", forKey: "type")
+//                            UserDefaults.standard.synchronize()
+//                            bibleVM.getBibles()
+//                    }
+//                    Text("신약")
+//                        .foregroundColor(bibleVM.isOld == "old" ? .gray : Color("Text"))
+//                        .onTapGesture(count: 1) {
+//                            UserDefaults.standard.set("new", forKey: "type")
+//                            UserDefaults.standard.synchronize()
+//                            bibleVM.getBibles()
+//                    }
+//            })
+        }.frame(minWidth: 200, maxWidth: 200)
+    }
+}
+
+struct mac_BibleListView_Previews: PreviewProvider {
+    static var previews: some View {
+        mac_BibleListView()
+    }
+}

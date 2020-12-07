@@ -6,7 +6,6 @@
 //  Copyright © 2020 jge. All rights reserved.
 //
 
-import UIKit
 import SwiftUI
 import SQLite3
 

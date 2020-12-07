@@ -10,8 +10,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        HStack {
+            mac_TapBar()
+                .frame(maxWidth: 60)
+            NavigationView {
+                mac_BibleListView()
+            }
+        }.frame(minWidth: 800, minHeight: 600)
     }
 }
 

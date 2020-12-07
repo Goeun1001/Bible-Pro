@@ -1,5 +1,5 @@
 framework module WaterfallGrid {
-  umbrella header "WaterfallGrid-umbrella.h"
+  umbrella header "WaterfallGrid-macOS-umbrella.h"
 
   export *
   module * { export * }

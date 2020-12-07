@@ -31,7 +31,7 @@ struct NumberListView: View {
             .padding(.leading, 25)
             .padding(.trailing, 25)
             .padding(.top, 20)
-            .navigationBarTitle(name)
+//            .navigationBarTitle(name)
     }
 }
 
