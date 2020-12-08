@@ -6,7 +6,6 @@
 //  Copyright © 2020 jge. All rights reserved.
 //
 
-
 import SwiftUI
 
 struct mac_ImageView: View {
@@ -67,7 +66,7 @@ struct mac_ImageView: View {
                                 self.postArranging(translation: value.translation, in: parent)
                             })
                         ))
-                        .gesture(magnify.onEnded { value in
+                        .gesture(magnify.onEnded { _ in
                             // without this the next gesture will be broken
                             self.lastValue = 1.0
                             let parent = geo.frame(in: .local)

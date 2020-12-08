@@ -12,7 +12,7 @@ struct mac_GyodokView: View {
     var body: some View {
         NavigationView {
             mac_gyodokList()
-                .frame(minWidth:200, maxWidth: 200)
+                .frame(minWidth: 200, maxWidth: 200)
         }
     }
 }

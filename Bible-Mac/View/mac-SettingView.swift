@@ -48,7 +48,6 @@ struct mac_SettingView: View {
     }
 }
 
-
 struct mac_SettingView_Previews: PreviewProvider {
     static var previews: some View {
         mac_SettingView()

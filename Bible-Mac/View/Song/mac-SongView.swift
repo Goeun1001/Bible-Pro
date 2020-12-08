@@ -13,7 +13,7 @@ struct mac_SongView: View {
         HStack {
             NavigationView {
                 mac_SongList()
-                    .frame(minWidth:250, maxWidth: 250)
+                    .frame(minWidth: 250, maxWidth: 250)
             }
         }.frame(minWidth: 900, minHeight: 600)
     }

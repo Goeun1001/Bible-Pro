@@ -16,7 +16,7 @@ struct mac_NumberListView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(1..<chapter_num+1, id:\.self) { number in
+                ForEach(1..<chapter_num+1, id: \.self) { number in
                     NavigationLink(destination: VerseView(bcode: self.bcode, cnum: number)) {
                         VStack(alignment: .center) {
                             Text(String(number)+"장")

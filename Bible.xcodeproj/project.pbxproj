@@ -212,6 +212,7 @@
 		D9D9B0E0257E05610037A4FA /* mac-ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "mac-ImageView.swift"; path = "Bible-Mac/View/Song/mac-ImageView.swift"; sourceTree = SOURCE_ROOT; };
 		D9D9B109257E148A0037A4FA /* mac-SongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "mac-SongView.swift"; path = "Bible-Mac/View/Song/mac-SongView.swift"; sourceTree = SOURCE_ROOT; };
 		D9D9B12C257E35C00037A4FA /* mac-GyodokView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "mac-GyodokView.swift"; path = "Bible-Mac/View/Gyodok/mac-GyodokView.swift"; sourceTree = SOURCE_ROOT; };
+		D9D9B14E257E46E80037A4FA /* DailyWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyWidgetExtension.entitlements; sourceTree = "<group>"; };
 		D9DD7D7324F14A64005F2A92 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		D9DD7D7524F14A64005F2A92 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		D9DD7D7624F14A64005F2A92 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
@@ -355,6 +356,7 @@
 		D9B8CFDC24DAB51A00890693 = {
 			isa = PBXGroup;
 			children = (
+				D9D9B14E257E46E80037A4FA /* DailyWidgetExtension.entitlements */,
 				D962DEDD24FFAB3D00491EF5 /* .swiftlint.yml */,
 				D9B8CFE724DAB51B00890693 /* Bible */,
 				D9C10C632577A69500081F2A /* DailyWidget */,
@@ -1193,7 +1195,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Bible/Preview Content\"";
-				DEVELOPMENT_TEAM = C2JSJLJ4FN;
+				DEVELOPMENT_TEAM = TUK4G5QM6Q;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Bible/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1203,6 +1205,7 @@
 				MARKETING_VERSION = 1.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeonggo.Bible;
 				PRODUCT_NAME = "Daily Bible";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1218,7 +1221,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Bible/Preview Content\"";
-				DEVELOPMENT_TEAM = C2JSJLJ4FN;
+				DEVELOPMENT_TEAM = TUK4G5QM6Q;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Bible/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1228,6 +1231,7 @@
 				MARKETING_VERSION = 1.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeonggo.Bible;
 				PRODUCT_NAME = "Daily Bible";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1239,8 +1243,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = DailyWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C2JSJLJ4FN;
+				DEVELOPMENT_TEAM = TUK4G5QM6Q;
 				INFOPLIST_FILE = DailyWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1248,9 +1253,10 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jeonggo.Bible.DailyWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeonggo.Bible.Widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1262,8 +1268,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = DailyWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C2JSJLJ4FN;
+				DEVELOPMENT_TEAM = TUK4G5QM6Q;
 				INFOPLIST_FILE = DailyWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1271,9 +1278,10 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jeonggo.Bible.DailyWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeonggo.Bible.Widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1290,7 +1298,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Bible-mac/Preview Content\"";
-				DEVELOPMENT_TEAM = C2JSJLJ4FN;
+				DEVELOPMENT_TEAM = TUK4G5QM6Q;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Bible-mac/Info.plist";
@@ -1317,7 +1325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Bible-mac/Preview Content\"";
-				DEVELOPMENT_TEAM = C2JSJLJ4FN;
+				DEVELOPMENT_TEAM = TUK4G5QM6Q;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Bible-mac/Info.plist";

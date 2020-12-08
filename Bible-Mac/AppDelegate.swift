@@ -8,7 +8,6 @@
 
 import Cocoa
 import SwiftUI
-import StoreKit
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -46,8 +45,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         } catch {
             print("Unable to copy foo.db: \(error)")
         }
-        
-        
         
         // MARK: View Appear
         

@@ -24,9 +24,9 @@ struct mac_TapBar: View {
                         .frame(width: 30, height: 30)
                     Text(tabs[i].text)
                 }.onTapGesture {
-                    if i == 0 { NSApp.sendAction(#selector(AppDelegate.openSongWindow), to: nil, from:nil) }
-                    if i == 1 { NSApp.sendAction(#selector(AppDelegate.openGyodokView), to: nil, from:nil) }
-                    if i == 2 { NSApp.sendAction(#selector(AppDelegate.openSettingView), to: nil, from:nil) }
+                    if i == 0 { NSApp.sendAction(#selector(AppDelegate.openSongWindow), to: nil, from: nil) }
+                    if i == 1 { NSApp.sendAction(#selector(AppDelegate.openGyodokView), to: nil, from: nil) }
+                    if i == 2 { NSApp.sendAction(#selector(AppDelegate.openSettingView), to: nil, from: nil) }
                 }
             }
         }
@@ -38,4 +38,3 @@ struct mac_TapBar_Previews: PreviewProvider {
         mac_TapBar()
     }
 }
-

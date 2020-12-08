@@ -46,10 +46,11 @@ struct SettingView: View {
                     Text("북마크함")
                 }
             }
+            #if !targetEnvironment(macCatalyst)
             Section(header: Text("구매")) {
                 ForEach(storeManager.myProducts, id: \.self) { product in
                     HStack {
-                            Text("오디오 구매")
+                        Text("오디오 구매")
                         Spacer()
                         if storeManager.isPurchased {
                             Text("구매됨")
@@ -60,7 +61,7 @@ struct SettingView: View {
                             }) {
                                 Text("구매하기")
                             }
-                                .foregroundColor(.blue)
+                            .foregroundColor(.blue)
                         }
                     }.onAppear {
                         print(product)
@@ -72,6 +73,8 @@ struct SettingView: View {
                     storeManager.restoreProducts()
                 }
             }
+            #endif
+            
         }
         .listStyle(GroupedListStyle())
         .environment(\.horizontalSizeClass, .regular)
