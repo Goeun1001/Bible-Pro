@@ -66,6 +66,7 @@
 		D9D9B0E1257E05610037A4FA /* mac-ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D9B0E0257E05610037A4FA /* mac-ImageView.swift */; };
 		D9D9B10A257E148A0037A4FA /* mac-SongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D9B109257E148A0037A4FA /* mac-SongView.swift */; };
 		D9D9B12D257E35C00037A4FA /* mac-GyodokView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D9B12C257E35C00037A4FA /* mac-GyodokView.swift */; };
+		D9D9B194257F97C10037A4FA /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = D962DEDD24FFAB3D00491EF5 /* .swiftlint.yml */; };
 		D9DD7DAF24F14A64005F2A92 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DD7D7324F14A64005F2A92 /* DataManager.swift */; };
 		D9DD7DB124F14A64005F2A92 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DD7D7524F14A64005F2A92 /* Track.swift */; };
 		D9DD7DB224F14A64005F2A92 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9DD7D7624F14A64005F2A92 /* NothingFoundCell.xib */; };
@@ -356,7 +357,6 @@
 		D9B8CFDC24DAB51A00890693 = {
 			isa = PBXGroup;
 			children = (
-				D9D9B14E257E46E80037A4FA /* DailyWidgetExtension.entitlements */,
 				D962DEDD24FFAB3D00491EF5 /* .swiftlint.yml */,
 				D9B8CFE724DAB51B00890693 /* Bible */,
 				D9C10C632577A69500081F2A /* DailyWidget */,
@@ -439,6 +439,7 @@
 		D9C10C632577A69500081F2A /* DailyWidget */ = {
 			isa = PBXGroup;
 			children = (
+				D9D9B14E257E46E80037A4FA /* DailyWidgetExtension.entitlements */,
 				D9C10C642577A69500081F2A /* DailyWidget.swift */,
 				D9C10C662577A69800081F2A /* Assets.xcassets */,
 				D9C10C682577A69800081F2A /* Info.plist */,
@@ -830,6 +831,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9D9B194257F97C10037A4FA /* .swiftlint.yml in Resources */,
 				D91BE9CB257DB1C700502DA4 /* holybible.db in Resources */,
 				D91BE9C7257DB1A300502DA4 /* Main.storyboard in Resources */,
 				D9D81DBD2578CEF000E99A6A /* Preview Assets.xcassets in Resources */,

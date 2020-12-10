@@ -20,7 +20,7 @@ struct mac_SettingView: View {
                 HStack {
                     Text("성경 한/영 전환")
                     Spacer()
-                    Picker("Articles", selection: $select) {
+                    Picker("", selection: $select) {
                         ForEach(0 ..< optionsTitle.count) { index in
                             Text(self.optionsTitle[index])
                         }

@@ -28,8 +28,6 @@ struct mac_ImageView: View {
                 self.lastValue = value
                 let newScale = self.scale * resolvedDelta
                 self.scale = min(self.maxScale, max(self.minScale, newScale))
-                
-                print("delta=\(value) resolvedDelta=\(resolvedDelta)  newScale=\(newScale)")
         }
         
         let gestureDrag = DragGesture(minimumDistance: 0, coordinateSpace: .local)

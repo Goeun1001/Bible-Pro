@@ -56,7 +56,7 @@ struct AudioPlayerControlsView: View {
                    minimumValueLabel: Text("\(Utility.formatSecondsToHMS(currentTime))"),
                    maximumValueLabel: Text("\(Utility.formatSecondsToHMS(currentDuration))")) {
                 // I have no idea in what scenario this View is shown...
-                Text("seek/progress slider")
+//                Text("seek/progress slider")
             }
             .disabled(state != .playing)
         }

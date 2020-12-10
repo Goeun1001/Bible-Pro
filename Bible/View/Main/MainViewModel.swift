@@ -39,8 +39,9 @@ class MainViewModel: ObservableObject {
         let vcode = UserDefaults.standard.value(forKey: "vcode") as! String
         let cnum = UserDefaults.standard.value(forKey: "cnum") as! String
         self.verses = readVerses("SELECT * FROM verses where bcode = '\(bcode)' AND cnum = '\(cnum)' AND vcode = '\(vcode)'")
-        
+        #if os(OSX)
         getBibleName()
+        #endif
     }
     
     func getNum() {

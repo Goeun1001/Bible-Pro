@@ -53,7 +53,6 @@ struct VerseView: View {
                                     Spacer()
                                 }
                                 Text(verse.content)
-                                    .lineLimit(nil)
                                     .fixedSize(horizontal: false, vertical: true)
                             }
                             //                            .contextMenu {
@@ -80,7 +79,7 @@ struct VerseView: View {
                             //                                    Text("Bookmark")
                             //                                }
                             //                            }
-                        }
+                        }.frame(maxHeight: .infinity)
                     }
                 }
             }
@@ -95,49 +94,10 @@ struct VerseView: View {
                 let playerItem = AVPlayerItem(url: url)
                 self.player.volume = 2
                 self.player.replaceCurrentItem(with: playerItem)
-                print("viewappear")
             }
             .onDisappear {
                 self.player.replaceCurrentItem(with: nil)
             }
-            //            .navigationBarItems(trailing:
-            //                                    HStack(spacing: 20) {
-            //                                        NavigationLink(destination: BibleListView()) {
-            //                                            mac_imageView(imageName: "burger", isSystem: false)
-            //                                        }
-            //                                        mac_imageView(imageName: "arrowtriangle.left", isSystem: true)
-            //                                            .onTapGesture {
-            //                                                if Int(self.verseVM.verses.first!.cnum)! - 1 != 0 {
-            //                                                    let minus = Int(self.verseVM.verses.first!.cnum)! - 1
-            //                                                    UserDefaults.standard.set("\(minus)", forKey: "cnum")
-            //                                                    UserDefaults.standard.synchronize()
-            //                                                    self.verseVM.getVerse()
-            //                                                    self.verseVM.getNum()
-            //                                                    guard let url = URL(string: "https://bible.jeonggo.com/audio/\(self.verseVM.realNum).mp3") else {
-            //                                                        return
-            //                                                    }
-            //                                                    let playerItem = AVPlayerItem(url: url)
-            //                                                    self.player.volume = 2
-            //                                                    self.player.replaceCurrentItem(with: playerItem)
-            //                                                }
-            //                                            }
-            //                                        mac_imageView(imageName: "arrowtriangle.right", isSystem: true)
-            //                                            .onTapGesture {
-            //                                                if Int(self.verseVM.verses.first!.cnum)! + 1 != self.verseVM.bibleName.chapter_count + 1 {
-            //                                                    let plus = Int(self.verseVM.verses.first!.cnum)! + 1
-            //                                                    UserDefaults.standard.set("\(plus)", forKey: "cnum")
-            //                                                    UserDefaults.standard.synchronize()
-            //                                                    self.verseVM.getVerse()
-            //                                                    self.verseVM.getNum()
-            //                                                    guard let url = URL(string: "https://bible.jeonggo.com/audio/\(self.verseVM.realNum).mp3") else {
-            //                                                        return
-            //                                                    }
-            //                                                    let playerItem = AVPlayerItem(url: url)
-            //                                                    self.player.volume = 2
-            //                                                    self.player.replaceCurrentItem(with: playerItem)
-            //                                                }
-            //                                            }
-            //                                    })
         }
     }
     func playRadio() {
